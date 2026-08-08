@@ -1,41 +1,185 @@
+/* =========================================
+   GENERAL PAGE STYLING
+========================================= */
 
-.heading
-{
-width: 100%;
-text-align: left;
-}
-.heading h3{
-    display: inline;
-}
-
-.heading button{
-    float: right;
-    border: 1px solid white;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
 }
 
-#start ,#status, #restart
-{
-font-size: 22px;
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #ffffff;
+    text-align: center;
 }
 
-.modal-dialog
-{
-    width: 70%;
+
+/* =========================================
+   MAIN GAME CONTAINER
+========================================= */
+
+.game-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
 }
-.modal-body
-{
-    text-align: left;
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.heading {
+    width: 100%;
+    min-height: 55px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #f0ad4e;
+    border-radius: 6px;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+.heading h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.heading button {
+    border: 1px solid #ffffff;
+}
+
+
+/* =========================================
+   GAME BUTTONS
+========================================= */
+
+#start,
+#status,
+#restart {
     font-size: 20px;
+    margin: 8px;
 }
-h4
-{
-   background-color: grey;
-   color:white;
-   line-height: 2;
+
+#status {
+    min-width: 180px;
 }
-canvas 
-  {
-      border:3px solid white;
-      border-radius: 20px;
-      box-shadow:  5px 5px 5px white;
-  }
+
+
+/* =========================================
+   CANVAS
+========================================= */
+
+#canvas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    overflow: hidden;
+}
+
+canvas {
+    border: 3px solid white;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px white;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.game-footer {
+    display: inline-block;
+
+    margin-top: 15px;
+    padding: 8px 18px;
+
+    background-color: rgba(0, 0, 0, 0.65);
+    color: #ffffff;
+
+    border-radius: 5px;
+}
+
+.game-footer h4 {
+    margin: 0;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   INSTRUCTIONS MODAL
+========================================= */
+
+.modal-dialog {
+    width: 70%;
+    max-width: 700px;
+}
+
+.modal-body {
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 768px) {
+
+    .game-container {
+        padding: 10px;
+    }
+
+    .heading {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .heading h3 {
+        font-size: 20px;
+    }
+
+    .heading button {
+        float: none;
+    }
+
+    .modal-dialog {
+        width: 95%;
+        margin: 10px auto;
+    }
+
+    .modal-body {
+        font-size: 16px;
+    }
+
+    #start,
+    #status,
+    #restart {
+        font-size: 18px;
+    }
+}
