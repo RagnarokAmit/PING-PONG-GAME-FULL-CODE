@@ -62,6 +62,6 @@ AI-Ping-Pong/
 ├── index.html
 ├── main.js
 ├── style.css
-├── background1.jpg
+├── background.jpg
 ├── ball_touch_paddel.wav
 └── missed.wav
